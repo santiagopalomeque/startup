@@ -1,0 +1,10 @@
+@media all and (max-width: 418px){
+	img {
+	    content:url(http://www.somosdiablos.com.ar/media/galeria/111/2/5/2/8/t_independiente_escudo-1588252.jpg);
+	}
+
+	.titulo{
+		color: red;
+		font-weight: 100;
+	}
+}

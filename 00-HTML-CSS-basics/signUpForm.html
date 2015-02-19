@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="author" content="Santiago Palomeque">
+		<meta name="description" content="Basics of HTML and CSS">
+		<meta name="viewport" content="width=device-width, inicial-scale=1.0,user-scalable=no">
+		<title>Sign Up</title>
+	</head>
+	<body>
+		<header>
+		<h1>Sign Up Form:</h1>
+		</header>
+		<form action="myForm.php">
+			<label for="firstname">First Name</label><br>
+			<input type="text" name="First Name" maxlength="20" id="firstname" required>
+			<br><br>
+			<label for="lastname">Last Name</label><br>
+			<input type="text" name="Last Name" maxlength="20" id="lastname" required>
+			<br><br>
+			<label for="eMail">eMail</label><br>
+			<input type="email" name="eMail" maxlength="35" id="eMail" required>
+			<br><br>
+			<label for="birthday">Birthday</label><br>
+			<input type="text" name="birthday"  placeholder="mm/dd/yyyy" id="birthday" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d">
+			<br><br>
+			<label for="lista">Favorite Sport</label><br>
+			<select  name="dropdown" id="lista"> 
+				<option value="Soccer" selected>Soccer</option>
+				<option value="Basketball">Basketball</option>
+				<option value="Volleyball">Volleyball</option>
+				<option value="Boxing">Boxing</option>
+				<option value="Swiming">Swiming</option>
+			</select>
+			<br><br>
+			<label for="biography">Biography</label><br>
+			<textarea rows="4" cols="50" id="biography">
+			</textarea>
+			<br><br>
+			<input type="submit" value="submit">
+			<input type="reset">
+		</form>
+	</body>
+</html>

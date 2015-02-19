@@ -1,0 +1,83 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; /* Needed for mobile WebKit */
+    -moz-box-sizing: border-box; /* Needed for Firefox */
+    box-sizing: border-box
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header{
+	font-size: 46px;
+}
+
+.footer{
+	clear: both; 
+	text:align:center;
+	font-size: 10px;
+}
+
+.sidebar{
+	position: absolute;
+  	right: 0px;
+  	width: 200px;
+}
+
+.navigation{
+	float: left; 
+	height: 300px;
+	width: 170px;
+	font-size: 12px;
+}
+
+.content{
+	position: relative;
+	font-size: 14px;
+  	margin-left: 200px;
+  	margin-right: 200px;
+}
+
+#titulo{
+	text:align:center;
+	margin-bottom:-12px;
+}
+
+#footerArticle{
+	clear: both;
+	text:align:center;
+}
+
+#tituloAside{
+	clear: both;
+	text:align:center;
+}
+
+
+html *{ /*Para resolver el 2.3.6: utilice el parametro !importante para que predominen estos valores. Font-weight: 500, para darle grosor a las letras y '*' para que se aplique a todo el documento*/
+   font-size: 14px !important;
+   font-family: sans-serif !important;
+   font-weight: 500 bold !important;
+}
+
+ 
+*[class$="r"]{
+	background-color: magenta; 
+}
+
+*[class*="a"] :not(*[class$="r"]){
+	background-color: blue;
+}
+
+#main {
+  max-width: 1500px;
+  margin: 0 auto; 
+}
+
+a:hover {
+    color: orange ;
+    font-weight: bold;
+    background-color: transparent ;
+}

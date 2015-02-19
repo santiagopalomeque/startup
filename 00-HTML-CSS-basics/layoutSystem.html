@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta name="author" content="Santiago Palomeque">
+		<title>Layout System</title>
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/layoutSystem_grid.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div class="intro">
+			<p>
+				<h1>Aca podemos observar las <span class="tipo">banderas</span> de 6 lugares <span class="tipo">distintos:</span></h1>
+			</p>
+		</div>
+		<div class="container">
+			<div class="row clearfix">
+			    <div class="column third">
+			      	<span class="screen">ARGENTINA</span>
+			      	<img src="banderas/argentina.jpg" alt="bandera de argentina" width="100%">
+			    </div> <!-- FIN COLUMNA UNO -->
+			    <div class="column third" id="europeo">
+			      	<span class="screen">EUROPA</span>
+			      	<img src="banderas/europea.jpg" alt="bandera de europa" width="100%">
+			    </div> <!-- FIN COLUMNA DOS -->
+			    <div class="column third" id="brasuca">
+			      	<span class="screen">BRASIL</span>
+			      	<img src="banderas/brasil.jpg" alt="bandera de brasil" width="100%">
+			    </div> <!-- FIN COLUMNA TRES -->
+			</div> <!-- FIN FILA UNO -->
+			<div class="row clearfix">
+		    	<div class="column third" id="mexicano">
+			      	<span class="screen">MEXICO</span>
+			      	<img src="banderas/mexico.jpg" alt="bandera de mexico" width="100%">
+		    	</div> <!-- FIN COLUMNA UNO -->
+		    	<div class="column third" id="tano">
+			      	<span class="screen">ITALIA</span>
+			      	<img src="banderas/italia.jpg" alt="bandera de italia" width="100%">
+		    	</div><!-- FIN COLUMNA DOS -->
+		    	<div class="column third" id="yankee">
+			      	<span class="screen">ESTADOS UNIDOS</span>
+			      	<img src="banderas/usa.jpg" alt="bandera de usa" width="100%">	
+   				</div><!-- FIN COLUMNA TRES -->
+		  	</div> <!-- FIN FILA DOS -->
+		</div>
+	</body>
+</html>
