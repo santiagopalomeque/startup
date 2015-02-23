@@ -5,7 +5,7 @@ $(document).ready(function(){
    });
 
   $('.boton').click(function(){
-    url: "http://localhost:4200/01-js-intro-and-jquery/index.html?";
+    window.location.reload();
   });
 
   $.ajax({
@@ -16,13 +16,15 @@ $(document).ready(function(){
     }
   });
 
+  
   $.ajax({ type: "GET",   
            url: "https://api.spotify.com/v1/search",  
            data: { q:'Rolling Stones', type:'album' }          
   }).done(function(response){
     var resultado= response.albums.items;
     var section= document.createElement("section"); //seccion nueva
-    section.setAttribute('id','infoBanda'); 
+    section.setAttribute('possition','relative'); 
+    section.setAttribute('top', '100px')
     document.body.appendChild(section);
     var div= document.getElementById('info'); 
     div.appendChild(section);
@@ -50,5 +52,6 @@ $(document).ready(function(){
         section.appendChild(ul);
     };
   });
+
 
 });

@@ -1,5 +1,14 @@
+@media all and (min-width: 400px) and (max-width: 600px){
+
+}
+
+}
 .seccion{
 	text-align: center;
+}
+
+.boton{
+	position: center;
 }
 
 .encabezado{
@@ -8,10 +17,10 @@
 	font-style: italic;
 }
 
-.info{
+#info{
 	position: relative;
 	float: right;
-	top: 40px;
+	top: 150px;
 	border-style: groove;
     border-width: 5px;
 	border-color:green;
@@ -26,9 +35,9 @@
 	background-color: green;
 }
 
-#texto{
+.alias{
 	position: relative;
 	left: 500px;
-	top: 20px;
+	top: 40px;
 }
 
