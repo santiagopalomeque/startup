@@ -1,0 +1,34 @@
+.seccion{
+	text-align: center;
+}
+
+.encabezado{
+	text-align: center;
+	position: relative;
+	font-style: italic;
+}
+
+.info{
+	position: relative;
+	float: right;
+	top: 40px;
+	border-style: groove;
+    border-width: 5px;
+	border-color:green;
+}
+
+#hid{
+	position: relative;
+	display: none;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 50px;
+	background-color: green;
+}
+
+#texto{
+	position: relative;
+	left: 500px;
+	top: 20px;
+}
+

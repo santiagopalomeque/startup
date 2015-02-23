@@ -1,8 +1,9 @@
 @media all and (min-width: 400px) and (max-width: 600px){
 	.content{
-		position: absolute; 
+
+		position: absolute;
+		left: 0;
 		font-size: 14px;
-	  	left: 0;
 	  	z-index: 1;
 	}
 }
