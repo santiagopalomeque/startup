@@ -56,6 +56,9 @@ Movie.prototype.set= function(attr,valor){
 Movie.prototype.get= function(attr){
 	return this.atributos[attr];
 };
+Movie.prototype.getVector= function(attr){
+  return this.atributos[attr].join(", ");
+}
 Movie.prototype.addObserverPlay= function(observer){
   this.misObserversPlay.add(observer);
 };
@@ -103,7 +106,7 @@ DownloadableMovie.prototype.download= function(){
   console.log("estoy bajando una peli");
 }
 
-/****************************PUNTO 9************************************/
+/****************************PUNTO 9 Y 10************************************/
 
 var Social= {
   share: function(friendName){
@@ -115,3 +118,24 @@ var Social= {
 };
 
 $.extend(Movie.prototype, Social);
+
+/*****************************PUNTO 11 ***************************************/
+function Actor(nombre){
+  this.name= nombre;
+};
+
+Actor.prototype.getNombre= function(){
+  return this.name;
+};
+
+/*****************************PUNTO 12 ***************************************/
+//los atributos de Movie, son dinamicos, se almacenan en una hashtable llamada atributos. Por lo tanto 
+//agrego un arreglo de actores a Movie de manera dinamica en atributos
+
+var peli= new Movie();
+var aux=[];
+var actor1 = new Actor("actorA");
+var actor2 = new Actor("actorB");
+aux.push(actor1);
+aux.push(actor2);
+peli.set("actores",aux);
