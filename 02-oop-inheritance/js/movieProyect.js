@@ -100,5 +100,5 @@ function MovieObserver(id){
 function DownloadableMovie() {};
 DownloadableMovie.prototype= new Movie();
 DownloadableMovie.prototype.download= function(){
-  console.log("estoy bajando");
+  console.log("estoy bajando una peli");
 }
