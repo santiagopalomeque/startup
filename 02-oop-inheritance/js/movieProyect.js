@@ -102,3 +102,16 @@ DownloadableMovie.prototype= new Movie();
 DownloadableMovie.prototype.download= function(){
   console.log("estoy bajando una peli");
 }
+
+/****************************PUNTO 9************************************/
+
+var Social= {
+  share: function(friendName){
+    console.log("compartiendo con " + friendName + " " + this.get("title"));
+  },
+  like: function(){
+    console.log("me gusta la pelicula " + this.get("title"));
+  }
+};
+
+$.extend(Movie.prototype, Social);
