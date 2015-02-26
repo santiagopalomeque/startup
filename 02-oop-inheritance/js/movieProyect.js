@@ -98,6 +98,37 @@ function MovieObserver(id){
 */
 };
 };
+/**************************PUNTO 7*************************************/
+
+var Movie = function () {
+
+  var model = {
+    attributes : {
+        this.atributos= {};
+        this.misObserversPlay= new ObserverList();
+        this.misObserversStop= new ObserverList();
+        }
+    };
+
+    model.set = function (attr , value) {
+        model.attributes[attr] = value;
+    }
+
+    model.get  = function () {
+        return model.attributes;
+    }
+
+    model.play = function (){
+        console.log ('Playing '+this.attributes['title']);
+    }
+
+    model.stop= function(){
+        console.log ('Stopped '+this.attributes['title']);
+    }
+
+    return model;
+};
+
 /**************************PUNTO 8*************************************/
 
 function DownloadableMovie() {};
@@ -139,3 +170,4 @@ var actor2 = new Actor("actorB");
 aux.push(actor1);
 aux.push(actor2);
 peli.set("actores",aux);
+
