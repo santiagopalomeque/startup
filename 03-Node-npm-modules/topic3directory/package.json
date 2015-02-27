@@ -1,0 +1,19 @@
+{
+  "name": "json",
+  "version": "1.0.0",
+  "description": "json package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "D:\\BootcampUI_Globant\\repositorioGithub\\startup\\startup\\03-Node-npm-modules"
+  },
+  "keywords": [
+    "topic3dir>npm",
+    "init"
+  ],
+  "author": "santiago palomeque",
+  "license": "ISC"
+}

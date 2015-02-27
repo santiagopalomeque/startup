@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\BootcampUI_Globant\\nodejs\\\\node.exe',
+1 verbose cli   'D:\\BootcampUI_Globant\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'practico3directory/movieModule.js' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 verbose node symlink D:\BootcampUI_Globant\nodejs\\node.exe
+5 silly cache add args [ 'practico3directory/movieModule.js', null ]
+6 verbose cache add spec practico3directory/movieModule.js
+7 silly cache add parsed spec { raw: 'practico3directory/movieModule.js',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: 'practico3directory/movieModule.js',
+7 silly cache add   spec: 'practico3directory/movieModule.js',
+7 silly cache add   type: 'github' }
+8 info maybeGithub Attempting practico3directory/movieModule.js from git://github.com/practico3directory/movieModule.js
+9 verbose addRemoteGit u="git://github.com/practico3directory/movieModule.js" silent=true
+10 silly addRemoteGit normalized { url: 'git://github.com/practico3directory/movieModule.js',
+10 silly addRemoteGit   branch: 'master' }
+11 silly addRemoteGit v git-github-com-practico3directory-movieModule-js-59726e60
+12 verbose addRemoteGit C:\Users\santiago\AppData\Roaming\npm-cache\_git-remotes\git-github-com-practico3directory-movieModule-js-59726e60 not in flight; cloning
+13 verbose git clone git://github.com/practico3directory/movieModule.js undefined
+13 verbose git clone git://github.com/practico3directory/movieModule.js undefined
+14 info maybeGithub Attempting practico3directory/movieModule.js from git+ssh://git@github.com:practico3directory/movieModule.js
+15 verbose addRemoteGit u="git+ssh://git@github.com:practico3directory/movieModule.js" silent=false
+16 silly addRemoteGit normalized { url: 'ssh://git@github.com/practico3directory/movieModule.js',
+16 silly addRemoteGit   branch: 'master' }
+17 silly addRemoteGit v ssh-git-github-com-practico3directory-movieModule-js-441171be
+18 verbose addRemoteGit C:\Users\santiago\AppData\Roaming\npm-cache\_git-remotes\ssh-git-github-com-practico3directory-movieModule-js-441171be not in flight; cloning
+19 error git clone ssh://git@github.com/practico3directory/movieModule.js undefined
+19 error git clone ssh://git@github.com/practico3directory/movieModule.js undefined
+20 verbose stack Error: not found: git
+20 verbose stack     at F (D:\BootcampUI_Globant\nodejs\node_modules\npm\node_modules\which\which.js:38:28)
+20 verbose stack     at E (D:\BootcampUI_Globant\nodejs\node_modules\npm\node_modules\which\which.js:41:29)
+20 verbose stack     at D:\BootcampUI_Globant\nodejs\node_modules\npm\node_modules\which\which.js:52:16
+20 verbose stack     at FSReqWrap.oncomplete (fs.js:99:15)
+21 verbose cwd D:\BootcampUI_Globant\repositorioGithub\startup\startup\03-Node-npm-modules\scripts
+22 error Windows_NT 6.1.7601
+23 error argv "D:\\BootcampUI_Globant\\nodejs\\\\node.exe" "D:\\BootcampUI_Globant\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "practico3directory/movieModule.js"
+24 error node v0.12.0
+25 error npm  v2.5.1
+26 error code ENOGIT
+27 error not found: git
+28 error Failed using git.
+28 error This is most likely not a problem with npm itself.
+28 error Please check if you have git installed and in your PATH.
+29 verbose exit [ 1, true ]
