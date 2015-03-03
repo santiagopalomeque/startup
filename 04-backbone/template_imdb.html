@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="author" content="Santiago Palomeque">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/imdb.css">
+        <title>IMDB</title>
+        <script src="./vendor/jquery-1.11.2.min.js"></script> 
+        <script src="./js/handlebars-v3.0.0.js"></script> 
+        <script src="./js/scriptIMDB.js"></script>
+	</head>
+	<body>
+		<div class= "texto"></div>
+		<div class="imagen"></div> 
+		<script id="movie_info" type="text/x-handlebars-template">
+		    <div class="movies">       
+		        <ul class="lista">
+		            {{#each movies}}
+		            <li>
+		                <p class="titulo">{{nombre}} ({{año}})</p>
+		                <p>{{descripcion}}</p>
+		                <p>Genero: {{genero}}</p>
+		                <p>Puntaje: {{rating}}</p>
+		                <p>Director: {{director}}</p>
+		            </li>
+		            {{/each}}
+		        </ul>
+		    </div>
+		   	<button class="boton">Watch Trailer</button>
+		</script>
+		<script id="movie_picture" type="text/x-handlebars-template">
+			<img src="{{imagen}}">
+		</script>
+	</body>
+</html>
