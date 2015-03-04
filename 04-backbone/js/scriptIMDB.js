@@ -16,14 +16,14 @@ $(document).ready(function(){
 	$('.texto').append(resultado_txt);
 
 	//script para la imagen
-	var img={imagen:'http://ia.media-imdb.com/images/M/MV5BMjEyMjcyNDI4MF5BMl5BanBnXkFtZTcwMDA5Mzg3OA@@._V1_SX214_AL_.jpg'};
+	var img={picture:[{imagen:'http://ia.media-imdb.com/images/M/MV5BMjEyMjcyNDI4MF5BMl5BanBnXkFtZTcwMDA5Mzg3OA@@._V1_SX214_AL_.jpg'}]};
 	var template_foto= $('#movie_picture').html();
 	var fotoCompilada = Handlebars.compile(template_foto);
 	var resultado_foto = fotoCompilada(img);
 	$('.imagen').append(resultado_foto);
 
-	$('.boton').click(function(){
+	/*$('.boton').click(function(){
 		window.open('https://www.youtube.com/watch?v=sY1S34973zA', 'The Godfather - Trailer - (1972)', '');
   		return false;
-	});    
+	});    */
 });

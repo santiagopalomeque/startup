@@ -14,7 +14,12 @@
 
 .titulo{
 	font-weight: bolder;
-	font-size: 20px;
+	font-size: 25px;
+}
+
+span{
+	font-weight: lighter;
+	font-size: 13px;
 }
 
 .boton{
@@ -31,4 +36,9 @@
 
 .lista{
 	list-style-type: none;
-}
+};
+
+
+/*
+HAY ALGUNA FORMA DE SEPARAR LOS <li> ENTRE SI Y ESPACIARLOS MAS?
+*/
