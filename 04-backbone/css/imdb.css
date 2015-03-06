@@ -36,9 +36,9 @@ span{
 
 .lista{
 	list-style-type: none;
-};
+}
 
+.movies .lista li{
+	height: 300px;
+}
 
-/*
-HAY ALGUNA FORMA DE SEPARAR LOS <li> ENTRE SI Y ESPACIARLOS MAS?
-*/
