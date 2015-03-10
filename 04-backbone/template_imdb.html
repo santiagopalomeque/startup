@@ -4,37 +4,50 @@
 		<meta charset="utf-8">
         <meta name="author" content="Santiago Palomeque">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/imdb.css">
+        <link rel="stylesheet" href="./css/imdb.css">
         <title>IMDB</title>
 	</head>
 	<body>
 		<div class= "texto"></div>
-		<div class="imagen"></div>
+		<div class= "imagen"></div>
+		<div class= "vista"></div>
 		<script id="movie_info" type="text/x-handlebars-template">
 		    <div class="movies">       
 		        <ul class="lista">
 		            {{#each movies}}
 		            <li>
-		                <p class="titulo">{{nombre}} <span>({{año}})</span></p>
+		                <p class="titulo">{{nombre}} <span class="year">({{año}})</span></p>
 		                <p>{{descripcion}}</p>
 		                <p>Genero: {{genero}}</p>
 		                <p>Puntaje: {{rating}}</p>
 		                <p>Director: {{director}}</p>
 		            </li>
-		                <!--button class="boton">Watch Trailer</button-->
 		            {{/each}}
 		        </ul>
-		    </div>
-		   	
+		    </div>  	
 		</script>
 		<script id="movie_picture" type="text/x-handlebars-template">
 			{{#each picture}}
 				<img src="{{imagen}}">
 			{{/each}}
 		</script> 
-	<script src="./js/handlebars-v3.0.0.js"></script> 
-	<script src="./vendor/jquery-1.11.2.min.js"></script> 
-    <script src="./js/scriptIMDB.js"></script>
-    <!--script src="./js/scriptListaMovies.js"></script-->
+		<script id="vista_template" type="text/html">
+			<div class="MovieView">
+				<p class="titulo"><%= nombre %> <span class="year">(<%= año %>)</span></p>
+                <p><%= descripcion %></p>
+                <p>Genero: <%= genero %></p>
+                <p>Puntaje: <%= rating %></p>
+                <p>Director: <%= director %></p>
+			</div>
+		</script>
+
+		<script src="./libs/handlebars-v3.0.0.js"></script> 
+		<script src="./libs/jquery-1.11.2.min.js"></script>
+		<script src="./libs/Underscore.js"></script> 
+		<script src="./libs/backbone.js"></script> 
+		<script src="./libs/localStorage.js"></script>
+	    <!--script src="./js/scriptIMDB.js"></script-->
+	    <!--script src="./js/scriptListaMovies.js"></script-->
+	    <script src="./js/moviePersistedInLH.js"></script>
 	</body>
 </html>

@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+/*MODELO*/
     var Movie= Backbone.Model.extend();
 
     var movie1= new Movie();
@@ -11,7 +12,7 @@ $(document).ready(function(){
     movie1.set('director','Francis Ford Coppola');
 
     var movie2= new Movie()
-	movie2.set('nombre','Fight Club');
+    movie2.set('nombre','Fight Club');
     movie2.set('año', '1999');
     movie2.set('descripcion', 'An insomniac office worker looking for a way to change his life crosses paths with a devil-may-care soap maker and they form an underground fight club that evolves into something much, much more...');
     movie2.set('genero', 'Drama');
@@ -34,6 +35,7 @@ $(document).ready(function(){
     movie4.set('rating', '8,9');
     movie4.set('director', 'Quentin Tarantino');
 
+/*COLECCION*/
     var MovieCollection= Backbone.Collection.extend({
         Model: Movie,
         localStorage: new Backbone.LocalStorage("moviePersistedInLH"),
@@ -44,4 +46,30 @@ $(document).ready(function(){
     coleccion.create(movie2);
     coleccion.create(movie3);
     coleccion.create(movie4);
+
+/*VISTA*/
+    var MovieView= Backbone.View.extend({
+        tagName: 'li',
+        template: _.template($('#vista_template').html()),
+       
+        render: function(){
+            this.$el.html(this.template(this.model.toJSON()));
+            return this;
+        }
+    });
+
+    var MoviesView= Backbone.View.extend({
+        tagName: 'ul',
+        //initialize: function(){ console.log(this.collection)}
+        render: function(){
+            this.collection.each(function(model){
+                var movieView= new MovieView({model: model});
+                this.$el.append(movieView.render().el);
+            },this);
+            return this;
+        }
+    });
+
+    var moviesView= new MoviesView({collection: coleccion});
+    $('.vista').append(moviesView.render().el);
 });
