@@ -1,0 +1,24 @@
+{
+	"books" : [
+	    		{"title": "Memoria de la Copla", 	
+	    		"author": "Conchita Piquera Isabel Pantoja",
+	    		"image": "http://www.di-arezzo.es/multimedia/images/anaya/couv/3432144.jpg" 
+				},
+				{"title": "No Hay Marcianos",
+				 "author": "Clark Carrados",  
+				"image": "http://www.ccapitalia.net/img/ciencia-ficcion-espacio-38.jpg" 
+				}
+				{"title": "El Escritor y sus Fantasmas",
+				 "author": "Ernesto Sabato",  
+				"image": "http://www.letralia.com/ciudad/hernandez/imagenes/fantasmas.jpg" 
+				}
+				{"title": "Bormann, Anatomia del Poder",
+				 "author": "Jorge Gonzales Crespo",  
+				"image": "http://www.libreria-argentina.com.ar/tapas/ayer-y-hoy/crespo-bormann.jpg" 
+				}
+				{"title": "Platero y yo",
+				 "author": "Juan Ramon Jimenez",  
+				"image": "https://soteromartin.files.wordpress.com/2014/10/cubierta-de-platero-y-yo.jpg" 
+				}
+			]
+}
