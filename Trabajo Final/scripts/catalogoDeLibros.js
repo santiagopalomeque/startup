@@ -4,7 +4,7 @@ app = {};
 
 var books = [
     		{title:'Memoria de la Copla', 	
-    		author:'Conchita Piquera Isabel Pantoja',
+    		author:'Manuel Roman',
     		image:'http://www.di-arezzo.es/multimedia/images/anaya/couv/3432144.jpg', 
 			},
 			{title:'No Hay Marcianos', 
@@ -67,10 +67,11 @@ app.Book = Backbone.Model.extend({
 		author: '',
 		image:'',		
 	},
-	validate: function (attrs) {
-        if (!attrs.title) {
+	initialize: function () {
+        if (!this.title) {
             return 'Please fill the Book Title field!';
-        }
+        };
+    }
 });
     
 // Collection    
@@ -79,7 +80,7 @@ app.BookList = Backbone.Collection.extend ({
     model: app.Book,
     localStorage: new Backbone.LocalStorage("catalogoDeLibros"),
 }); 
-app.books = new app.BookList(books);
+app.books = new app.BookList();
 for (var i= 0; i < books.length; i++) {
 	app.books.create(books[i]);
 };
@@ -136,31 +137,20 @@ app.EditView = Backbone.View.extend({
 		var image = this.$el.find("#image").val();
 		var author= this.$el.find("#author").val();
 		var bookModel = new app.Book({title:title,image:image,author:author});	
-		this.collection.add(bookModel);       
+		this.collection.add(bookModel, _.extend({silent: true})); 
+		this.collection.create(bookModel); 
+		this.render;
 	},
 	deleteBook:function(e){
 		e.preventDefault();
 		var tituloBuscado= this.$el.find("#title_delete").val();
-		var ModeloBuscado= this.collection.find(function(model) { 
+		var modeloBuscado= this.collection.find(function(model) { 
 			return model.get('title') == tituloBuscado; 
-			alert(ModeloBuscado.get('title'));
+			alert(modeloBuscado.get('title'));
 		});
-		//this.collection.remove(modeloBuscado);	
+		this.collection.remove(modeloBuscado);	
 	},
     render: function () {
-		this.$el.html(this.template());
-		return this;
-	}
-});
-
-// About View
-    
-    
-app.AboutView = Backbone.View.extend({
-    tagName: 'div',
-	className: 'about',
-	template: _.template( $( '#aboutTemplate' ).html()),
-	render: function () {
 		this.$el.html(this.template());
 		return this;
 	}
